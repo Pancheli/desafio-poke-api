@@ -33,7 +33,7 @@ export default function PokemonCard({ infoPokemon }) {
         <>
         <section id="card" style={{background: `radial-gradient(circle at 50% 0%, ${themeColor} 36%, #ffffff 36%)`}}>
             <p className="hp">
-                <span>HP</span>
+                <span>HP </span>
                 {infoPokemon.hp}
             </p>
             <img src={infoPokemon.img} alt={`Imagen de ${infoPokemon.name}`} />
@@ -42,6 +42,20 @@ export default function PokemonCard({ infoPokemon }) {
                 {infoPokemon.types?.map((type, i) => (
                     <span key={i} style={{backgroundColor: typeColor[type]}}>{type}</span>
                 ))}
+            </div>
+            <div className="stats">
+                <div>
+                    <h3>{infoPokemon.stat_attack}</h3>
+                    <p>Attack</p>
+                </div>
+                <div>
+                    <h3>{infoPokemon.stat_defense}</h3>
+                    <p>Defense</p>
+                </div>
+                <div>
+                    <h3>{infoPokemon.stat_speed}</h3>
+                    <p>Speed</p>
+                </div>
             </div>
 
         </section>

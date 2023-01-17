@@ -20,7 +20,7 @@ export default function Detalles() {
             const data = await resp.json();
             const obj_info_pokemon = {
                                       name: data.name[0].toUpperCase() + data.name.slice(1),
-                                      img: data.sprites.other.dream_world.front_dafault,
+                                      img: data.sprites.other.dream_world.front_default,
                                       hp: data.stats[0].base_stat,
                                       stat_attack: data.stats[1].base_stat,
                                       stat_defense: data.stats[2].base_stat,
@@ -36,7 +36,7 @@ export default function Detalles() {
     };
 
     return (
-        <div className="container margen-top">
+        <div className="info-pokemon">
             {
                 (!nombre)?
                 <p>No hay valor</p>:
